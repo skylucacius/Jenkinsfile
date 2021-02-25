@@ -18,20 +18,18 @@ pipeline {
     // Environments Specification Variables
     /*
     * Pipeline for 5 Environments:
-    * DevelopmentEnvironment = apps.graodegente.com.br
+    * DevelopmentEnvironment -> apps.graodegente.com.br
     * RegressionEnvironment -> Where your automated tests will test your applications.
     * AcceptanceEnvironment -> Where you run your acceptance tests of your applications.
-    * PreProductionEnvironment = 'qa.mktsystems.com'
-    * ProductionEnvironment = 'apps.graodegente.com.br'
+    * PreProductionEnvironment -> 'qa.mktsystems.com'
+    * ProductionEnvironment -> 'apps.graodegente.com.br'
     */
     DevelopmentEnvironment = 'apps.graodegente.com.br'
-    RegressionEnvironment = 'Regression'
-    AcceptanceEnvironment = 'Acceptance'
-    PreProductionEnvironment = 'qa.mktsystems.com'
+    RegressionEnvironment = AcceptanceEnvironment = PreProductionEnvironment = 'Testing'
     ProductionEnvironment = 'apps.graodegente.com.br'
     // Regression URL Specification
-    ProbeEnvironmentURL = 'https://regression-env.acmecorp.com/'
-    BddEnvironmentURL = 'app-dev.mktsystems.com'
+    ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
+    BddEnvironmentURL = 'https://qa.mktsystems.com/'
     // OutSystems PyPI package version
     OSPackageVersion = '0.3.1'
   }
