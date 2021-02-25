@@ -185,12 +185,4 @@ pipeline {
       }
     }
   }
-  post {
-    always {
-      echo 'Deleting artifacts folder content...'
-      dir ("${env.ArtifactsFolder}") {
-        deleteDir()
-      }
-    }
-  }
 }
