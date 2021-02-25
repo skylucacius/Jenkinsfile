@@ -25,7 +25,9 @@ pipeline {
     * ProductionEnvironment -> 'apps.graodegente.com.br'
     */
     DevelopmentEnvironment = 'apps.graodegente.com.br'
-    RegressionEnvironment = AcceptanceEnvironment = PreProductionEnvironment = 'Testing'
+    RegressionEnvironment = 'Testing'
+    AcceptanceEnvironment = 'Testing'
+    PreProductionEnvironment = 'Testing'
     ProductionEnvironment = 'apps.graodegente.com.br'
     // Regression URL Specification
     ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
