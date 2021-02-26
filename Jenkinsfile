@@ -34,10 +34,23 @@ pipeline {
     BddEnvironmentURL = 'https://qa.mktsystems.com/'
     // OutSystems PyPI package version
     OSPackageVersion = '0.3.1'
-  }
-  pipeline {
-    agent any
-
+  }  
+  stages {
+    stage('Install Python Dependencies') {
+      steps {
+        echo "Create ${env.ArtifactsFolder} Folder"
+        // Create folder for storing artifacts
+        powershell "mkdir ${env.ArtifactsFolder}"
+        // Only the virtual environment needs to be installed at the system level
+        echo "Install Python Virtual environments"
+        powershell 'pip install -q -I virtualenv --user'
+        // Install the rest of the dependencies at the environment level and not the system level
+        withPythonEnv('python') {
+          echo "Install Python requirements"
+          powershell "pip install -U outsystems-pipeline==\"${env.OSPackageVersion}\""
+        }
+      }
+    }
     stages {
         stage('Test') {
             steps {
@@ -50,9 +63,6 @@ pipeline {
         }
     }    
   }
-  pipeline {
-    agent any
-
     stages {
         stage('Deploy') {
             when {
