@@ -14,7 +14,7 @@ pipeline {
     LifeTimeHostname = 'https://mktsystems-lt.outsystemsenterprise.com/'
     LifeTimeAPIVersion = 2
     // Authentication Specific Variables
-    AuthorizationToken = credentials('LifeTimeServiceAccountToken=')
+    AuthorizationToken = credentials('LifeTimeServiceAccountToken')
     // Environments Specification Variables
     /*
     * Pipeline for 5 Environments:
@@ -24,14 +24,14 @@ pipeline {
     * PreProductionEnvironment -> 'qa.mktsystems.com'
     * ProductionEnvironment -> 'apps.graodegente.com.br'
     */
-    DevelopmentEnvironment = 'https://qa.graodegente.com.br/ProductCatalog/'
-    RegressionEnvironment = 'Testing'
-    AcceptanceEnvironment = 'Testing'
-    PreProductionEnvironment = 'Testing'
-    ProductionEnvironment = 'https://qa.graodegente.com.br/ProductCatalog/'
+    DevelopmentEnvironment = 'Development'
+    RegressionEnvironment = 'Regression'
+    AcceptanceEnvironment = 'Acceptance'
+    PreProductionEnvironment = 'Pre-Production'
+    ProductionEnvironment = 'Production'
     // Regression URL Specification
-    ProbeEnvironmentURL = 'https://qa.graodegente.com.br/ProductCatalog/'
-    BddEnvironmentURL = 'https://qa.graodegente.com.br/ProductCatalog/'
+    ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
+    BddEnvironmentURL = 'https://qa.mktsystems.com/'
     // OutSystems PyPI package version
     OSPackageVersion = '0.3.1'
   }
