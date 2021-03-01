@@ -277,6 +277,5 @@ pipeline {
           dir ("${env.ArtifactsFolder}") {
             deleteDir()
           }
-        }
-      }
+        }     
 }
