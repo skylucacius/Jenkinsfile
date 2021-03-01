@@ -14,7 +14,7 @@ pipeline {
     LifeTimeHostname = 'https://mktsystems-lt.outsystemsenterprise.com/'
     LifeTimeAPIVersion = 2
     // Authentication Specific Variables
-    AuthorizationToken = credentials('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsaWZldGltZSIsInN1YiI6Ik4yTmlZV1kzTldVdFpXSXlZeTAwWkRWaUxXRTRaakl0Tm1FNVpqQmpNVE0yTVRNeSIsImF1ZCI6ImxpZmV0aW1lIiwiaWF0IjoiMTYxMzc2MjYwNiIsImppdCI6IjV5cGJwWG5pd1QifQ==.2TUnheqK0Xrd+st9nEiBBF4Po0h3Qrt4pPB+P7VKzhA=')
+    AuthorizationToken = credentials('LifeTimeServiceAccountToken=')
     // Environments Specification Variables
     /*
     * Pipeline for 5 Environments:
