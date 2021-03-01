@@ -34,25 +34,27 @@ pipeline {
     BddEnvironmentURL = 'https://qa.mktsystems.com/'
     // OutSystems PyPI package version
     OSPackageVersion = '0.3.1'
-  // }  
-  // stages {
-  //   stage('build') {
-  //     steps {
-  //       echo "Building the application"
-  //     }
-  //   }
-  //   stage('test') {
-  //     steps {
-  //       echo "Testing the application"
-  //     }
-  //   }
-  //       stage('deploy') {
-  //     steps {
-  //       echo "Deplying the application"
-  //     }
-  //   }           
   }
-  stages {
+//   }  
+//   stages {
+//     stage('build') {
+//       steps {
+//         echo "Building the application"
+//       }
+//     }
+//     stage('test') {
+//       steps {
+//         echo "Testing the application"
+//       }
+//     }
+//         stage('deploy') {
+//       steps {
+//         echo "Deplying the application"
+//       }
+//     }           
+//   }
+// }
+stages {
     stage('Get and Deploy Latest Tags') {
       agent any // Replace by specific label for narrowing down to OutSystems pipeline-specific agents
       steps {
@@ -277,5 +279,8 @@ pipeline {
           dir ("${env.ArtifactsFolder}") {
             deleteDir()
           }
-        }     
+        }
+      }
+    }
+  }
 }
