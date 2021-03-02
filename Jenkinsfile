@@ -19,7 +19,7 @@ pipeline {
     LifeTimeHostname = 'https://mktsystems-lt.outsystemsenterprise.com/'
     LifeTimeAPIVersion = 2
     // Authentication Specific Variables
-    // AuthorizationToken = credentials('LifeTimeServiceAccountToken')
+    AuthorizationToken = credentials('LifeTimeServiceAccountToken')
     // Environments Specification Variables
     /*
     * Pipeline for 5 Environments:
