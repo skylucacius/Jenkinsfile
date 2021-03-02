@@ -45,10 +45,10 @@ pipeline {
         agent any // Replace by specific label for narrowing down to OutSystems pipeline-specific agents
         steps {
             echo 'teste 4'
-        //   echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
-        //   echo "Create ${env.ArtifactsFolder} Folder"
-        //   // Create folder for storing artifacts
-        //   powershell "mkdir ${env.ArtifactsFolder}"
+          echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
+          echo "Create ${env.ArtifactsFolder} Folder"
+          // Create folder for storing artifacts
+          powershell "mkdir ${env.ArtifactsFolder}"
         //   // Only the virtual environment needs to be installed at the system level
         //   echo 'Install Python Virtual environments'
         //   powershell 'pip install -q -I virtualenv --user'
