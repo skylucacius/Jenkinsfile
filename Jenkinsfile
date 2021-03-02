@@ -46,13 +46,13 @@ pipeline {
         steps {
             
             echo 'teste 4'
-          echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
-          echo "Create ${env.ArtifactsFolder} Folder"
-          // Create folder for storing artifacts
-          powershell "mkdir ${env.ArtifactsFolder}"
-          // Only the virtual environment needs to be installed at the system level
-          echo 'verificando a versão do python ...'
-          powershell 'python --version'
+        //   echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
+        //   echo "Create ${env.ArtifactsFolder} Folder"
+        //   // Create folder for storing artifacts
+        //   powershell "mkdir ${env.ArtifactsFolder}"
+        //   // Only the virtual environment needs to be installed at the system level
+        //   echo 'verificando a versão do python ...'
+        //   powershell 'python --version'
         //   echo 'Install Python Virtual environments'
         //   powershell 'pip install -q -I virtualenv --user'
         //   withPythonEnv('python') {
