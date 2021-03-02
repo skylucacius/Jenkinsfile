@@ -54,6 +54,7 @@ pipeline {
         //   echo 'verificando a versão do python ...'
         //   powershell 'python --version'
         //   echo 'Install Python Virtual environments'
+        sh 'python --version'
         //   powershell 'pip install -q -I virtualenv --user'
         //   withPythonEnv('python') {
         //     echo 'Install Python requirements'
