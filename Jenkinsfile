@@ -53,7 +53,7 @@ pipeline {
         //   // Only the virtual environment needs to be installed at the system level
         //   echo 'verificando a versão do python ...'
         //   powershell 'python --version'
-        //   echo 'Install Python Virtual environments'
+          echo 'Install Python Virtual environments'
         sh 'python --version'
         //   powershell 'pip install -q -I virtualenv --user'
         //   withPythonEnv('python') {
