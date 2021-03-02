@@ -44,7 +44,8 @@ pipeline {
       stage('Get and Deploy Latest Tags') {
         agent any // Replace by specific label for narrowing down to OutSystems pipeline-specific agents
         steps {
-          echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
+            echo "teste 3"
+        //   echo "Pipeline run triggered remotely by '${params.TriggeredBy}' for the following applications (including tests): '${params.ApplicationScopeWithTests}'"
         //   echo "Create ${env.ArtifactsFolder} Folder"
         //   // Create folder for storing artifacts
         //   powershell "mkdir ${env.ArtifactsFolder}"
