@@ -12,7 +12,7 @@ pipeline {
         description: 'Name of LifeTime user that triggered the pipeline remotely.')
   }
   options { skipStagesAfterUnstable() }
-  environment {
+//   environment {
     // // Artifacts Folder
     // ArtifactsFolder = "Artifacts"
     // // LifeTime Specific Variables
@@ -39,7 +39,7 @@ pipeline {
     // BddEnvironmentURL = 'https://qa.mktsystems.com/'
     // // OutSystems PyPI package version
     // OSPackageVersion = '0.3.1'
-  }
+//   }
   stages {
       stage('Get and Deploy Latest Tags') {
         agent any // Replace by specific label for narrowing down to OutSystems pipeline-specific agents
