@@ -29,16 +29,16 @@ pipeline {
     * PreProductionEnvironment -> 'qa.mktsystems.com'
     * ProductionEnvironment -> 'apps.graodegente.com.br'
     */
-    // DevelopmentEnvironment = 'Development'
-    // RegressionEnvironment = 'Regression'
-    // AcceptanceEnvironment = 'Acceptance'
-    // PreProductionEnvironment = 'Pre-Production'
-    // ProductionEnvironment = 'Production'
-    // // Regression URL Specification
-    // ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
-    // BddEnvironmentURL = 'https://qa.mktsystems.com/'
-    // // OutSystems PyPI package version
-    // OSPackageVersion = '0.3.1'
+    DevelopmentEnvironment = 'Development'
+    RegressionEnvironment = 'Regression'
+    AcceptanceEnvironment = 'Acceptance'
+    PreProductionEnvironment = 'Pre-Production'
+    ProductionEnvironment = 'Production'
+    // Regression URL Specification
+    ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
+    BddEnvironmentURL = 'https://qa.mktsystems.com/'
+    // OutSystems PyPI package version
+    OSPackageVersion = '0.3.1'
   }
   stages {
       stage('Get and Deploy Latest Tags') {
