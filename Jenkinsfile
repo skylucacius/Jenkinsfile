@@ -12,34 +12,34 @@ pipeline {
         description: 'Name of LifeTime user that triggered the pipeline remotely.')
   }
   options { skipStagesAfterUnstable() }
-//   environment {
-//     // Artifacts Folder
-//     ArtifactsFolder = "Artifacts"
-//     // LifeTime Specific Variables
-//     LifeTimeHostname = 'https://mktsystems-lt.outsystemsenterprise.com/'
-//     LifeTimeAPIVersion = 2
-//     // Authentication Specific Variables
-//     AuthorizationToken = credentials('LifeTimeServiceAccountToken')
-//     // Environments Specification Variables
-//     /*
-//     * Pipeline for 5 Environments:
-//     * DevelopmentEnvironment -> apps.graodegente.com.br
-//     * RegressionEnvironment -> Where your automated tests will test your applications.
-//     * AcceptanceEnvironment -> Where you run your acceptance tests of your applications.
-//     * PreProductionEnvironment -> 'qa.mktsystems.com'
-//     * ProductionEnvironment -> 'apps.graodegente.com.br'
-//     */
-//     DevelopmentEnvironment = 'Development'
-//     RegressionEnvironment = 'Regression'
-//     AcceptanceEnvironment = 'Acceptance'
-//     PreProductionEnvironment = 'Pre-Production'
-//     ProductionEnvironment = 'Production'
-//     // Regression URL Specification
-//     ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
-//     BddEnvironmentURL = 'https://qa.mktsystems.com/'
-//     // OutSystems PyPI package version
-//     OSPackageVersion = '0.3.1'
-//   }
+  environment {
+    // Artifacts Folder
+    ArtifactsFolder = "Artifacts"
+    // LifeTime Specific Variables
+    LifeTimeHostname = 'https://mktsystems-lt.outsystemsenterprise.com/'
+    LifeTimeAPIVersion = 2
+    // Authentication Specific Variables
+    AuthorizationToken = credentials('LifeTimeServiceAccountToken')
+    // Environments Specification Variables
+    /*
+    * Pipeline for 5 Environments:
+    * DevelopmentEnvironment -> apps.graodegente.com.br
+    * RegressionEnvironment -> Where your automated tests will test your applications.
+    * AcceptanceEnvironment -> Where you run your acceptance tests of your applications.
+    * PreProductionEnvironment -> 'qa.mktsystems.com'
+    * ProductionEnvironment -> 'apps.graodegente.com.br'
+    */
+    DevelopmentEnvironment = 'Development'
+    RegressionEnvironment = 'Regression'
+    AcceptanceEnvironment = 'Acceptance'
+    PreProductionEnvironment = 'Pre-Production'
+    ProductionEnvironment = 'Production'
+    // Regression URL Specification
+    ProbeEnvironmentURL = 'https://qa.mktsystems.com/'
+    BddEnvironmentURL = 'https://qa.mktsystems.com/'
+    // OutSystems PyPI package version
+    OSPackageVersion = '0.3.1'
+  }
   stages {
       stage('Get and Deploy Latest Tags') {
         agent any // Replace by specific label for narrowing down to OutSystems pipeline-specific agents
